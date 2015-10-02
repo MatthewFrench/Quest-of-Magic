@@ -1,0 +1,43 @@
+
+This file contributed by
+Mike Richardson, CEO of
+SilverNetwork.net
+
+(edited by Al Staffieri Jr. for including with GameMaker)
+
+Here's some handy code involving AppleScript in GameMaker.
+
+
+When you launch GMOnline, it is in the foreground. But you want to have your game in the foreground, don't you? Use this code to put GMOnline in the back!
+(Note: GMOnline is a GameMaker addon that lets you make multiplayer games across the internet. See http://alstaffieri.com/gmaddons.html)
+
+BEGIN APPLESCRIPT
+   tell me
+      activate
+   end tell
+END APPLESCRIPT
+
+
+Here's some handy code to make AOL open a new mail document:
+
+BEGIN APPLESCRIPT
+   tell application "America Online"
+      activate
+      make new document with properties {kind:mail}
+   end tell
+END APPLESCRIPT
+
+
+Use this code to make your web browser go to the Game Maker web forums.
+
+BEGIN APPLESCRIPT
+   tell application "Safari"
+      activate
+      GetURL "http://www.gamemakersgarage.com/cgi-bin/yabb/YaBB.cgi"
+   end tell
+END APPLESCRIPT
+
+
+
+Mike Richardson, CEO of
+SilverNetwork.net

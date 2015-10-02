@@ -1,0 +1,458 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww16160\viewh10260\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 ----- GAMEMAKER VERSION HISTORY -----\
+\
+v3.9.95 - 8/08/11\
+-FIX: Clicking on Al's Home Page in the Internet menu was not correctly linking to the page.\
+-FIX: In OS X 10.6 after accessing external files, a "Can't access temporary file" error would occur causing GameMaker to not be able to save the project.\
+-FIX: When importing graphics files, all files are now shown as available for importing.\
+-MOD: SPRITEPATH command was missing from the help text.\
+-NEW: Added SPRITECOLLIDE syntax to test if sprite is touching a specified area or coordinate. \
+\
+v3.9.94 - 6/12/09\
+-FIX: Using the command INVENTORY WINDOW made the inventory list invisible in certain situations.\
+-FIX: Using EXIT REPEAT inside an IF THEN structure was causing a script error in compiled games.\
+-FIX: Only 25 sounds could be shown in the Sound window. It should have been able to show up to 50 sounds and now does. \
+\
+v3.9.93 - 2/08/09\
+-FIX: There was still a REPEAT bug that caused an error when changing cards from inside a REPEAT loop with GOTOCARD command.\
+-FIX: A change in the graphics copying routines caused crashes when using Undo menu or the selection tool.\
+\
+v3.9.92 - 1/30/09\
+-FIX: Using REPEAT with a negative number resulted in an infinite loop. All REPEAT loops will now execute at least once even if the variable is less than 1.\
+-FIX: Additional fixes for any remaining REPEAT bugs.\
+-FIX: PRINT text wasn't showing up until the entire script was completed.\
+-FIX: The "Do on mouse down" option in click areas did not work correctly in compiled games.\
+-MOD: Increase the maximum lines of code to 750.\
+-MOD: Updated internet links to point to alstaffieri.com and macgamemaker.com\
+\
+v3.9.91 - 8/23/08\
+-FIX: There was a bug in compiled games that wouldn't show more than 10 sprites.\
+-FIX: REFRESH TEXT did not erase the card text if the original card text was blank.\
+-FIX: The PRINT command wasn't printing text in compiled games if a semicolon was used at the end of the text.\
+-FIX: Adding strings together was not always adding the strings correctly.\
+-FIX: SPRITECOLLIDE was returning true even if one of the sprites was hidden.\
+-FIX: There were still some cases where the line after END REPEAT was not being run.\
+-FIX: There was a "Nested REPEAT" error when running a 2nd repeat loop inside an ON event structure (On MOUSEDOWN, ON MOUSEUP, ON TIMER, ON KEYDOWN).\
+\
+v3.9.9 - 1/17/08\
+-FIX: A bug in the Applescript code made sprites flash and disappear when a script was finished running.\
+-FIX: The text field no longer flashes when multiple PRINT commands are used.\
+-FIX: The MOVIE command was not showing the movie at the correct location (was always 0 0)\
+-FIX: There was a bug in FILEIO WRITE that was not always saving to the proper folder.\
+-FIX: The END command with no parameters (to end the game) was not working.\
+-MOD: Remove quotes from text returned in END APPLESCRIPT.\
+-MOD: WINDOW TEXT loads text files faster.\
+-MOD: The maximum number of sprites on the screen is increased to 20 (was 10).\
+\
+v3.9.8 - 11/03/07\
+-FIX: A new bug in WINDOW TEXT wasn't displaying contents of a text file if the file didn't contain end of line characters.\
+-FIX: There was a disappearing sprite bug in card scripts if the previous card layout was the same as the current card.\
+-FIX: The REPEAT and possibly other block structures were running some code fragments of their structures when they were in IF blocks sections that should not be executed because the IF section was not true.\
+-FIX: The MouseDown built in variable was always returning 0 inside TIMER, MOUSEUP, and MOUSEDOWN structures.\
+-FIX: Another bug with movies, sprites, etc not always displaying depending on if they are in a folder or not.\
+-FIX: Recompile with different version of FutureBASIC compiler to fix possible crashes when running in new OS versions.\
+-MOD: GameMaker and compiled games now require OS X and will no longer run in Classic/OS 9.\
+-NEW: You can now pass variables to applescript in the BEGIN APPLESCRIPT command using BEGIN APPLESCRIPT var1 var2\
+\
+v3.9.7 - 9/1/07\
+-FIX: Selecting 'Window at Top' in the Game Options window displayed the wrong window size.\
+-FIX: Cursor names were not showing up in the pop up menu in the Click Area Options window.\
+-NEW: CLEAR PICT clears the card picture.\
+\
+v3.9.6 - 8/23/07\
+-FIX: Any remaining bugs with Select All and then pasting a picture from the clipboard should really be fixed now.\
+-FIX: The ALERT command was showing garbage text if the text to display was an empty string.\
+-FIX: When running a game in the editor, if the New menu was selected after an ALERT was displayed, the game would stop running and switch back to editing mode.\
+-FIX: An old bug resurfaced that would not display files in folders with IMAGEFILE, SPRITE, MOVIE commands.\
+-FIX: Cursors were not always being saved to the compiled games and thus not available to be shown in compiled games.\
+-FIX: If a cursor other than the standard arrow cursor was in use, it was not getting reset to the arrow cursor when starting a new game.\
+-FIX: The current cursor in use was not being saved to players saved games and was unable to be set correctly when the game was later loaded to continue play.\
+-FIX: An 'IF x$ = " " THEN xx' would return 'IF without THEN' error if x$ contained only space characters.\
+-FIX: Click areas were not being displayed when the Click Area tool was selected and the user switched to another card.\
+-FIX: Block command structures inside a SELECT CASE that were not executed because the CASE was not true was returning errors.\
+-FIX: DOMENU QUIT was not always asking to save even if the "Don't use save alert" option was not selected.\
+-FIX: Having multiple REPEAT blocks inside a TIMER block was returning an error.\
+-FIX: The window created with WINDOW TEXT was displaying line feed characters in the text file instead of breaking to the next line.\
+-MOD: Placement of most OK and Cancel buttons reorganized to more closely follow Apple guidelines.\
+-NEW: CurrentCard built in variable returns the current card.\
+-NEW: ASC command returns the ASCII value of a character.\
+\
+v3.9.5 - 3/01/07\
+-FIX: When using paint tools, If you use the edit menu to Select All and then delete, some paint tools wouldn't work correctly unless you painted a dot or put a picture on the card.\
+-FIX: Using END SELECT inside a IF structure was returning an END SELECT without SELECT error if the part of the IF structure where the END SELECT was placed was not being executed.\
+-FIX: Adding strings together caused an error if the length of the new string was more than 255 characters. The new string is now truncated to 255 characters. \
+-FIX: The Paint Bucket tool was not working correctly on some Macs with OS X 10.4.x.\
+-NEW: TIMER x can be used to change the amount of time in a timer.\
+\
+v3.9.4 - 2/05/07\
+-FIX: The kagi store link in the Demo version has been updated.\
+-FIX: In OS 9, the movie picture disappeared if the window later needed to be refreshed.\
+-FIX: The SELECT CASE command didn't correctly check for numerical variables. It only checked for either an actual number or strings.\
+-FIX: Saving the project file did not always save the "Loop Script" card option to the file.\
+-FIX: The keydown$ variable and KEYDOWN code block structure were not getting reset after a new game was started or a saved game was opened.\
+-FIX: Some block structures did not work or returned syntax errors if they were inside other block structures.\
+-MOD: The "Requires QuickTime" option has been updated to include newer versions of QuickTime.\
+-MOD: ON KEYDOWN now returns case sensitive characters in KeyDown$ rather than only upper-case characters.\
+-NEW: The Delete/backspace key now works with ON KEYDOWN by returning a "DELETE" string.\
+-NEW: LoopScript builtin variable to check if code has looped yet or not in card scripts.\
+-NEW: UCASE$ command sets a string to all upper-case characters.\
+\
+v3.9.3 - 8/31/06\
+-FIX: REFRESH was not clearing the text area in compiled games if there was no text originally on the card.\
+-FIX: REFRESH was not always updating the card layout correctly if used in card scripts.\
+-FIX: Playing movies with QuickTime 7 or higher installed caused GameMaker to crash.\
+-MOD: All STOPALERT commands are converted to CAUTIONALERT because STOPALERT is not available in OS X. \
+\
+v3.9.2 - 8/06/06\
+-FIX: There was a bug that was drawing the wrong size frame around the window if the status bar or counter was hidden using script commands.\
+-FIX: A bug in INVENTORY WINDOW did not correctly display the inventory if the command was used in a card script.\
+-FIX: The EXIT command was not always exiting a structure or script correctly.\
+-FIX: Pressing <COMMAND> + <PERIOD> was quitting compiled games. This is now disabled.\
+-FIX: Click Areas would not always work correctly if "Loop Script" option was used in the card script.\
+-FIX: Using SELECT CASE structures sometimes incorrectly caused a "Nested SELECT CASE not allowed" error.\
+-FIX: Sprite information (location, if hidden, etc) was not being saved to players saved game files.\
+-MOD: The NOTE command is now asyncronous (script continues to run while the sound is being played), but will still wait before playing if a previous sound is already playing.\
+-MOD: No Classic version. Now requires CarbonLib 1.6 with OS 8.6 or better or OS X.\
+-NEW: The Internet menu in GameMaker now has links to the Users Guide and the message board forums.\
+-NEW: You can hide the cursor by using SETCURSOR with any negative number.\
+-NEW: ON KEYDOWN command structure.\
+-NEW: FILEEXISTS command.\
+\
+v3.9.1 - 1/20/06\
+-FIX: Any remaining Selection tool bug should hopefully be fixed.\
+-MOD: Increase the maximum lines of code to 15 in the demo version.\
+-NEW: You can import text files by dragging them onto the GameMaker application icon in either the Finder or the Dock (previously only worked for pictures and sounds).\
+\
+v3.9 - 10/29/05\
+-FIX: Playing sounds would sometimes cause GameMaker and compiled games to crash or quit unexpectedly if multiple sounds were used in a game.\
+-FIX: The Selection tool drew multiple frames if the entire picture was previously deleted.\
+-FIX: Using the Language menu to enter the name of a sound in a line of script was not entering the name of the sound.\
+-FIX: There was still a bug that messed up the New Game Options window if you used the Help button in that window to open the Help window.\
+-FIX: Mouse coordinates were incorrectly drawn in the current paint color instead of always in black.\
+-FIX: Text field no longer flashes when using REFRESH or CLEAR commands.\
+-FIX: Inventory items were not always being correctly saved to a player's saved games.\
+-MOD: Pictures are now saved in a different manner to reduce file size.\
+-MOD: The WINDOW TEXT command displays different sized windows depending on the amount of text in the file being displayed.\
+-MOD: Improved importing of images and sounds when they are dropped onto the GameMaker application icon in the Dock.\
+-NEW: Loop Script option in card scripts lets any card script continue looping while the player is on that card.\
+-NEW: MouseDown built in variable to test if the mouse button is currently down or not.\
+\
+v3.8.7 - 10/11/05\
+-FIX: An empty window was being displayed in the startup splash window and the WINDOW SPLASH command when running in OS X.\
+-FIX: There was a window drawing bug when moving a selected graphic partially out of the picture area and then pressing the OPTION key.\
+-FIX: A string addition bug printed the name of the string instead of the string contents if the string = ""\
+-FIX: A white picture the size of the picture area was being saved instead of completely deleting the picture from the scrap file when Select All was used and then either the DELETE key, Cut menu, or Clear menu was used.\
+-FIX: When closing a Click Area window, the text on the current card was not always being redrawn until something in the window was clicked on.\
+-FIX: Improved graphics file importing allows more file formats while filtering out more unusable formats.\
+-FIX: Multiple New Game Options windows could open if the Help window was opened using the button in the New Game Options window and then the New menu item in the File menu was selected.\
+\
+v3.8.6 - 9/17/05\
+-FIX: The PRINT command wasn't printing text to the window until the entire script was completed.\
+-FIX: The window title was not being changed to reflect the new file's name after using the "Save As" menu to save the file with a new name.\
+-FIX: MOVIE and SPRITE commands were not working if the files were stored in a folder.\
+-FIX: After playing a movie, the underlying card picture was flashed over the movie for a split second.\
+-NEW: Added SELECT CASE structure commands.\
+\
+v3.8.5 - 8/22/05\
+-FIX: IMAGEFILE graphics were not showing up if the file was in a folder.\
+-FIX: Sprites could disappearing if the card script had certain code.\
+-FIX: There was a sprite scaling bug when a sprite was internally redrawn after IMAGEFILE or other graphics drawing commands.\
+-FIX: Issues concerning the Quit menu item after switching between editing and running should be solved.\
+\
+v3.8.4 - 6/19/05\
+-FIX: Entering a number larger than 100 or less than 0 in the status bar options resulted in strange numbers being saved.\
+-NEW: Speed up sprites by about 25%.\
+-NEW: SPRITE SCALE command to scale the size of a sprite.\
+\
+v3.8.3 -12/23/04\
+-FIX: Eraser tool was not working correctly in OS 9.\
+-FIX: Card picture was not saved if the delete key was pressed while a selection was active and then the user switched to another card.\
+-FIX: Select All menu was not setting the tool to the selection tool.\
+-FIX: There was a graphics bug if the Select All menu was chosen while an area was already selected.\
+-FIX: Sprites were not always working in OS X.\
+-FIX: The main window was not being refreshed correctly after using the script editor window from a click area options window.\
+-FIX: Opening the clipboard window while a script editor window was open could lead to a crash.\
+\
+v3.8.2 - 11/05/04\
+ -FIX: After recording a sound and closing the window, the card picture and toolbar were getting drawn at the top left of the monitor and not in a window rather than in the main window where it should be.\
+-FIX: Get Picture menu messed up the main window if Get Picture was used after certain other windows had been opened and closed.\
+-FIX: Using the Card Script to change the layout, but then cancelling it messed up the main window.\
+-FIX: Selection Menu item was not getting disabled if there was no picture area in the window.\
+-FIX: After a picture was pasted from the clipboard, the current tool was not being set to the Selection tool.\
+-FIX: There was an edit field refresh bug after the card info script window was cancelled.\
+-FIX: Applescript wasn't always working in OS X.\
+-FIX: There was a bug in application setup windows if you minimized one of the windows.\
+-FIX: Selecting patterns now shows a frame around the selected pattern.\
+-FIX: There was a bug that displayed the previously selected picture in a new game project if a new project was opened and the previous project had a selection rectangle active.\
+-FIX: Window border was not correct when using Hide Desktop with plain window.\
+-FIX: Window size was too small if Inventory was used, but counter and status bar were not.\
+-FIX: WINDOW command was crashing in OS X.\
+-NEW: Selections can be scaled by holding down the option key and dragging the corner of the selection.\
+-NEW: Mouse coordinates are shown in the lower right of the main window.\
+-NEW: INVENTORY DELETE with no parameters deletes all inventory items.\
+\
+v3.8.1 - 7/30/04\
+-Fix bug in USERASK\
+\
+v3.8 - 6/22/04\
+-New Inventory feature.\
+-New SPRITEPATH command.\
+-Buttons in main window should no longer overlap each other in OS X.\
+-Pasting text now removes the styled info so the text is the correct font and style.\
+-Fix bug that didn't let you use a negative in front of variable name (X = -Y)\
+-Fix bug that didn't hide all of the background if "hide background" selected and monitor resolution was changed.\
+-Fix bug in WINDOW command.\
+-Fix bug so non existing strings are set to "" instead of 0.\
+\
+v3.7 - 4/02/04\
+-Fixed a bug that was using the wrong font in a PRINT command if the status bar was in use.\
+-Fixed a bug in ON MOUSEDOWN and ON MOUSEUP commands.\
+-Fix AppleScript bugs.\
+-AppleScript now supports return values.\
+-New CHR$ command.\
+\
+v3.6 - 3/11/04\
+-The maximum value for the statusbar can now be set from 1 to 100 (previously 5 to 9) and can be changed in your program with the STATUSBAR command.\
+-The Status Bar name was not being reset for a new game if the Status Bar name was changed during game play.\
+-The Counter name was not being reset for a new game if the Counter name was changed during game play.\
+\
+v3.5.2 - 1/30/04\
+-Fix a bug in the USERASK option of button script windows.\
+\
+v3.5.1 - 10/31/03\
+-Fix a crashing/quitting bug in OS X when copying an image to the clipboard.\
+-Fix a click area framing bug when a picture is selected in the window while the click area tool is active.\
+-Remove 68K compiled game support and all other old 68K support code.\
+-Remove the rounded corner window style option since it isn't available in Carbon.\
+-The standard highlight color is now used in Help window topics if carbonLib 1.6 or greater is installed or if OS X is installed.\
+-Minor changes to where the line tool is displayed in the toolbar.\
+\
+v3.5 - 8/29/03\
+-Fix IMAGEFILE Option not being read from a saved file correctly.\
+-Fix a bug in Applescript command that prevented future commands from working if an AS error occured.\
+-Fix a bug when the Help window was used in the opening splash window.\
+-Fix a bug when REPEAT used in MOUSEDOWN/MOUSEUP block\
+-Fix a bug when REPEAT used in an ON TIMER block.\
+-Fix a bug in RANDOM that wouldn't let you pick a negative number.\
+-Fix a bug that didn't refresh the main window after a script window was closed if the\
+game was saved while the script window was open.\
+-The click area number is now shown in click areas.\
+-MouseHorz and MouseVert game variables are now always updated while a script is running.\
+-You can have up to 10 sprites on the screen at once.\
+-New SPRITECOLLIDE command checks to see if two sprites have collided.\
+-New YESNOALERT and OKCANCELALERT.\
+-New WINDOW command opens a window to show either a graphics file or text file.\
+-New Selection tool.\
+-New SpriteClicked game variable returns the number of the sprite that was clicked.\
+\
+v3.4.3 - 2/04/03\
+-Really fix bug in compiled games that wouldn't play movies.\
+-Fix a "Missing resource" error when launchng a URL from 68K Macs.\
+\
+v3.4.2 - 12/17/02\
+-Fix bug in compiled games that wouldn't play movies.\
+-Fix bug in status bar code that sometimes changed the font in the text area.\
+\
+v3.4.1 - 11/19/02\
+-Fix bug in OS X that sometimes didn't refresh window after color pop up was used.\
+-Fix paint fill bug in OS X that shifted the fill.\
+-Fix non showing animations in OS X.\
+-Fix bug that was resetting the image file option when a saved file was opened.\
+-Fix a bug in LET that messed up the last word in a string.\
+-Attempt to fix clipboard bug that causes crashes when cutting or copying pictures.\
+\
+v3.4 - 9/22/02\
+-New Carbon version runs in OS X.\
+-Can compile games that run in OS X.\
+-Fix bug in SETCURSOR that didn't recognize variables for the cursor number.\
+-New GETAREA command.\
+-IMAGEFILE now has no flicker.\
+-Add "IMAGEFILE command uses overlay" game option.\
+-New SPRITE command.\
+-POPFIELD has a gray background with a shadowbox.\
+-Minor changes to user About Box window in Application Setup.\
+-Raise sound limit from 25 to 50.\
+-Various GUI changes to accomodate Carbon version.\
+-Text in the Help window can be copied to the clipboard.\
+\
+v3.31 - 6/21/02\
+-Fix NOTE command not working correctly in compiled games.\
+-Fix splash window not showing up in compiled games.\
+\
+v3.3 - 2/18/02\
+-Fix minor display bug in Application Setup window.\
+-Add SETCURSOR submenu to Language menu.\
+-Fix bug that created multiple Help menu items if Load file is clicked and then cancelled at startup.\
+-Remove -1, -2, etc showing up in "Go to Card" fields when End game, DoMenu, or other options are chosen.\
+-Show user About window in Run Mode instead of GM About window.\
+-Add QuickTime v5.0 to "Requires QT version" in Application Setup window.\
+-The "Disable Above Options in Card #1" option is now unchecked as the default.\
+-Remove remaining launch application restrictions from run mode.\
+-Add HIDECOUNTER command.\
+-Add SHOWCOUNTER command.\
+-Add HIDESTATUSBAR command.\
+-Add SHOWSTATUSBAR command.\
+-If GM Toolkit (or an alias to it) is in the same folder as GameMaker, then 2 picture buttons will be shown in script editor windows to let you format the script and check it for errors.\
+-Fix paint fill bug.\
+-Change COMMAND + Q for stopping game in Run Mode to COMMAND + PERIOD.\
+-Fixes to IMAGEFILE. Should be less flicker and no memory problems.\
+-Importing picts has a preview window.\
+-Change NavServices to work with OS 8.5 and up rather than 8.1 and up.\
+-Minor fixes to file error handling due to changes in FutureBASIC compiler.\
+-Fix HIDEAREA bug in compiled games.\
+-Fix SHOWAREA bug in compiled games.\
+-Fix SETAREA bug in compiled games.\
+-Raise script limit to 500 lines or 30k (was 250 lines or 20k).\
+-Fix bug that corrupted scripts if the total code on a card added up to more than 32k.\
+-Fix bug when stoping run mode that could cause Tools menu to select more than one tool and the edit field not be editable if the card had no pict area.\
+-Eliminate some extra window flicker when editing the game in some situations.\
+-REPEAT can be used with no number after it to keep looping until EXIT REPEAT (press OPTION key to break out if you get stuck in an infinate loop).\
+-Minor changes to some windows to make them less modal.\
+-Games can be compiled for 68K, PPC, or FAT.\
+-New CONTAINS command for strings (example: IF X$ CONTAINS "Hi" THEN BEEP)\
+\
+v3.2.4 - 10/12/01\
+-Fix bug when selecting card layout in New Game Options.\
+-Fix bug with END command in a IF THEN block.\
+-Fix bug in the card options window that wouldn't let you use "Don't use Save Alert" option. -Find/Change now deletes find string when Change is selected with no string in the Change field.\
+-Image from IMAGEFILE was being erased in card script even if REFRESH command was used before IMAGEFILE.\
+-Fix "string too long" error when setting a sound to play in card options window.\
+\
+v3.2.3 - 9/27/01\
+-More changes to IMAGEFILE.\
+-Fix bug in pop up menus that covered menu text in System 7.\
+-Progress bar and status bar are now Appearance compliant.\
+-Fix bug in DOMENU NEW that doesn't properly go to card 1.\
+-HIDEAREA and SHOWAREA were missing from Help.\
+-Fix case sensitive bug in IF/THEN.\
+-Eliminate screen flash when a color, pattern, or line width is selected.\
+-No limit on the amount of variables that can be used (limited only by memory).\
+-Script parser is up to 300% faster depending on what commands are used.\
+-LET can optionally be used to set variables (LET X = 1).\
+-Fix bug showing quotes in button names when opening player saved games.\
+-Fix string parsing bugs when adding strings together.\
+-FILEIO can now read and write to files in a folder if the folder is in the same folder as your game.\
+\
+v3.2.2 - 7/23/01\
+-Minor improvements to pop up menus in dialogs.\
+-Remove BEEPs mistakenly left in for testing opening of GM 3.1.1 files.\
+-Fix picture area frame getting changed to pattern when paint fill used.\
+-Fix File errors in FILEIO because of change in latest FB compiler.\
+-Add error checking for string too long when parsing scripts (truncate strings).\
+-VAL command was missing from Scripting Reference doc.\
+-Script error window showed wrong line number if the error was on a line higher than 99.\
+-Improved paser code for adding string variables together.\
+-Fix counter not erasing totally if going from large number to single digit number.\
+-Using a file number of 0 with FILEIO will use the System folder for reading and writing files.\
+-Hopefully fixed "Can't use DEF DISPOSE on resource handle" errors.\
+-Increase maximum amount of words on a line from 50 to 80 to fix various scripting problems in long lines.\
+-Use real default frame button in dialog windows instead of PICT resource.\
+-New game window no longer looks inactive after Help window opened and closed.\
+-Fix bug that didn't show movie correctly in card 1 in compiled games.\
+-Fix problems with DOMENU button options.\
+-Fix crashing bugs when saving games.\
+-Change the way IMAGEFILE command works.\
+\
+v3.2.1 - 6/22/01\
+-Improved Appearance support (edit fields in dialog windows have white background, focus ring around active field, pop up menus updated).\
+-Fix OK button not working when recording sounds.\
+-Fix TIMER bug in compiled games.\
+-Fix garbage in About text for your game (in Application Setup)\
+-FILEIO commands are now listed in the Language menu.\
+-FILEIO works with number variables (only worked with strings in v3.2)\
+-POPFIELD waits until mouse is released before continuing script.\
+-Added CAUTIONALERT, NOTEALERT, and STOPALERT commands.\
+\
+v3.2 - 6/18/01\
+-PPC native version compiled with FutureBASIC 3\
+-Compiles PPC games (Fat and 68K options may be added in a future release)\
+-Your script code runs 25% to 80% faster.\
+-Maximum amount of lines in a script has been raised from 150 to 250.\
+-Simple file handling with FILEIO commands (see the scripting reference). NOTE: There are still some bugs in FILEIO. I think it only handles string variables right now.\
+-SETCURSOR command to change the cursor.\
+-BEGIN APPLEEVENT/END APPLEEVENT command structure to let you send AppleEvents to other applications.\
+-Colorize card layout icons and window style icons in Options window.\
+-Fix bug when resetting variables that was not resetting USERASK$ properly and could mess up string handling.\
+-Reduce script parser code slightly (may improve speed a bit).\
+-You can drag System sound files and image files onto the GameMaker application icon to import them into your game. Sounds will be added to the list of sounds. Images will be placed in the graphics area for the current card.\
+-Uses the new file loading and saving windows (Navigation Services) if you have OS 8.5 or higher.\
+-Fix line number in script editor window not updating after Cut or Clear menus used.\
+-Fix paint fill bug that incorrectly painted all black parts that touched the graphics border frame.\
+-The LaunchURL plugin is no longer needed.\
+\
+v3.11 - 2/24/01\
+-Fix bug in window border in compiled games\
+-Fix bugs with REFRESH and PICT commands when used while movies are playing in compiled games.\
+\
+v3.1 - 2/22/01\
+-Fix bug in WORD$ that returned full string if looking for last word.\
+-Put Quit button in opening splash window.\
+-Add alert to ask if you want to delete the click area.\
+-Remove limitation on "save game" option in card info window of card 1.\
+-Add clipboard option to About window.\
+-Fix bug that erased About pict if file open cancelled.\
+-Show list of available sounds in SOUND item of Language menu.\
+-Player can now use the buttons, click areas and menus while a movie is playing (game play doesn't stop).\
+-Home, End, Page Up, and Page Down keys work in script editor window.\
+-Fix bug in window border when "large game area" off, hide desktop, full screen graphics display, no counter or status bar (black frame was at wrong location).\
+-POPFIELD command to show text in a small box that will pop up along the bottom of the graphics area. The box disappears when the mouse is clicked.\
+-Fix bug in GOTOCARD command that wouldn't launch an app with a string variable (GOTOCARD :$var$$ didn't work).\
+-Using GOTOCARD to launch an application now works in GameMaker (previously only worked in compiled games)\
+\
+v3.09 - 12/22/00\
+-Fix quote character bug in string variables when setting a string to "".\
+-Fix bug when opening saved games that could show wrong button names.\
+-Fix bug with buttons being reset after SHOWBUTTON in card script.\
+-Minor changes to some errors in sound handling.\
+-Fix mousehorz, mousevert not updating if mouse is clicked several times very quickly.\
+-Fix clip region bug when showing a card picture in card scripts with PICT command.\
+-Attempted a fix for possible memory leak in IMAGEFILE command (didn't fully test as I couldn't duplicate the reported problem).\
+-Add some missing commands to the scripting help and reference file.\
+-Added Find/Replace options for text area and script editor.\
+-You can now include a picture in the "About" and splash windows.\
+\
+v3.08 - 11/22/00\
+-Fix memory bugs in PICT and REFRESH commands.\
+-Fix bug when opening a player's saved game files. GM was trying to read from the wrong file.\
+-Fix several more bugs in compiled games when there's more than 125 lines of code.\
+-Fix bug in compiled games when saving files. GM tried to write to the wrong file if click area coordinates needed to be saved.\
+\
+v3.07 - 11/2/00\
+-Fixes to IMAGEFILE command in compiled games.\
+-Fix bugs in compiled games if more than 100 variables used.\
+-Fix bugs in compiled games if more than 125 lines of code are in a script.\
+-Fix END IF wihout IF THEN error when using EXIT REPEAT.\
+-Click areas that are moved in scripts now get saved to the player's saved games.\
+-Window title is now shown correctly when opening a player's saved game if the window title was changed with SETWINDOWTITLE before the game was saved.\
+-Make the window smaller if counter and statusbar are both turned off in run mode and compiled games.\
+-If you use the plain window with no title bar and select the "Hide desktop" option, the white border around the picture and text area will be eliminated (quick hack to simulate full screen mode).\
+\
+v3.06 - 9/27/00\
+-Your game version number is now saved, loaded, and reset correctly.\
+-Fix typo in an error message.\
+-Entire line in script window now gets highlighted when "Go To Line" used to go to a line (to fix text edit bug that was selecting end of previous line).\
+-Now has "Line X of Y" in script window.\
+-Fix scroll problem that put the selected line past bottom of window when "Go to Line" used.\
+-Raise maximum amount of lines per script to 150.\
+-Added LEN command to get length of a string (x = LEN a$).\
+-Added VAL command to get a string's numeric value (x = VAL a$).\
+-Fix bug that didn't show a button that was hidden on a previous card.\
+-Fix bug that wasn't updating counter display when changed in click areas.\
+-Fix bug that kept setting "Do On Mouse Down" click area option to off.\
+-Add HIDEAREA and SHOWAREA commands (click areas still not saved to players game).\
+-Raise maximum amount of variables (both strings and integers) to 125.\
+-Add isSoundPlaying and isMoviePlaying built in variables.\
+-Fix bug that didn't always disable MOUSEUP/MOUSEDOWN code when branching to another card.\
+-Fixes to DATE$ and TIME$.\
+-You can now put IF x THEN to test if x <> 0 in IF THEN commands.\
+-Add EXIT REPEAT command to exit a REPEAT loop.\
+-Putting a ; after a PRINT command eliminates the automatic return character.\
+-SWAP command wasn't working with string variables.\
+-Add STR$ command to convert a number to a string (a$ = STR$ x)\
+\
+}
