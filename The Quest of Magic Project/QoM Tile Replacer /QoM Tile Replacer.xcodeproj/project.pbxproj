@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34F45F401452353000187037 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F45F3F1452353000187037 /* Cocoa.framework */; };
+		34F45F4A1452353000187037 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34F45F481452353000187037 /* InfoPlist.strings */; };
+		34F45F4C1452353000187037 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F45F4B1452353000187037 /* main.m */; };
+		34F45F501452353000187037 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 34F45F4E1452353000187037 /* Credits.rtf */; };
+		34F45F531452353000187037 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F45F521452353000187037 /* AppDelegate.m */; };
+		34F45F561452353000187037 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F45F541452353000187037 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		34F45F3B1452353000187037 /* QoM Tile Replacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QoM Tile Replacer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F45F3F1452353000187037 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		34F45F421452353000187037 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		34F45F431452353000187037 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		34F45F441452353000187037 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		34F45F471452353000187037 /* QoM Tile Replacer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QoM Tile Replacer-Info.plist"; sourceTree = "<group>"; };
+		34F45F491452353000187037 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		34F45F4B1452353000187037 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		34F45F4D1452353000187037 /* QoM Tile Replacer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QoM Tile Replacer-Prefix.pch"; sourceTree = "<group>"; };
+		34F45F4F1452353000187037 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		34F45F511452353000187037 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		34F45F521452353000187037 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		34F45F551452353000187037 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34F45F381452353000187037 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F45F401452353000187037 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34F45F301452352F00187037 = {
+			isa = PBXGroup;
+			children = (
+				34F45F451452353000187037 /* QoM Tile Replacer */,
+				34F45F3E1452353000187037 /* Frameworks */,
+				34F45F3C1452353000187037 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34F45F3C1452353000187037 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34F45F3B1452353000187037 /* QoM Tile Replacer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34F45F3E1452353000187037 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34F45F3F1452353000187037 /* Cocoa.framework */,
+				34F45F411452353000187037 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34F45F411452353000187037 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34F45F421452353000187037 /* AppKit.framework */,
+				34F45F431452353000187037 /* CoreData.framework */,
+				34F45F441452353000187037 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		34F45F451452353000187037 /* QoM Tile Replacer */ = {
+			isa = PBXGroup;
+			children = (
+				34F45F511452353000187037 /* AppDelegate.h */,
+				34F45F521452353000187037 /* AppDelegate.m */,
+				34F45F541452353000187037 /* MainMenu.xib */,
+				34F45F461452353000187037 /* Supporting Files */,
+			);
+			path = "QoM Tile Replacer";
+			sourceTree = "<group>";
+		};
+		34F45F461452353000187037 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34F45F471452353000187037 /* QoM Tile Replacer-Info.plist */,
+				34F45F481452353000187037 /* InfoPlist.strings */,
+				34F45F4B1452353000187037 /* main.m */,
+				34F45F4D1452353000187037 /* QoM Tile Replacer-Prefix.pch */,
+				34F45F4E1452353000187037 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34F45F3A1452353000187037 /* QoM Tile Replacer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F45F591452353000187037 /* Build configuration list for PBXNativeTarget "QoM Tile Replacer" */;
+			buildPhases = (
+				34F45F371452353000187037 /* Sources */,
+				34F45F381452353000187037 /* Frameworks */,
+				34F45F391452353000187037 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QoM Tile Replacer";
+			productName = "QoM Tile Replacer";
+			productReference = 34F45F3B1452353000187037 /* QoM Tile Replacer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34F45F321452352F00187037 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 34F45F351452352F00187037 /* Build configuration list for PBXProject "QoM Tile Replacer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 34F45F301452352F00187037;
+			productRefGroup = 34F45F3C1452353000187037 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34F45F3A1452353000187037 /* QoM Tile Replacer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34F45F391452353000187037 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F45F4A1452353000187037 /* InfoPlist.strings in Resources */,
+				34F45F501452353000187037 /* Credits.rtf in Resources */,
+				34F45F561452353000187037 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34F45F371452353000187037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F45F4C1452353000187037 /* main.m in Sources */,
+				34F45F531452353000187037 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		34F45F481452353000187037 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F45F491452353000187037 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		34F45F4E1452353000187037 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F45F4F1452353000187037 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		34F45F541452353000187037 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F45F551452353000187037 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34F45F571452353000187037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		34F45F581452353000187037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		34F45F5A1452353000187037 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QoM Tile Replacer/QoM Tile Replacer-Prefix.pch";
+				INFOPLIST_FILE = "QoM Tile Replacer/QoM Tile Replacer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		34F45F5B1452353000187037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QoM Tile Replacer/QoM Tile Replacer-Prefix.pch";
+				INFOPLIST_FILE = "QoM Tile Replacer/QoM Tile Replacer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34F45F351452352F00187037 /* Build configuration list for PBXProject "QoM Tile Replacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F45F571452353000187037 /* Debug */,
+				34F45F581452353000187037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34F45F591452353000187037 /* Build configuration list for PBXNativeTarget "QoM Tile Replacer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F45F5A1452353000187037 /* Debug */,
+				34F45F5B1452353000187037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34F45F321452352F00187037 /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'QoM Tile Replacer' target in the 'QoM Tile Replacer' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

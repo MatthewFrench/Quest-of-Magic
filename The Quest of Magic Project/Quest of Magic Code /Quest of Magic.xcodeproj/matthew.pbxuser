@@ -1,0 +1,88 @@
+// !$*UTF8*$!
+{
+	344C66F513566ED000753EF9 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 34D512841359104A00FC1443 /* Quest of Magic */;
+		activeTarget = 344C66FD13566ED000753EF9 /* Quest of Magic */;
+		codeSenseManager = 34D512981359104D00FC1443 /* Code sense */;
+		executables = (
+			34D512841359104A00FC1443 /* Quest of Magic */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 324603978;
+			PBXWorkspaceStateSaveDate = 324603978;
+		};
+		sourceControlManager = 34D512971359104D00FC1443 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	344C66FD13566ED000753EF9 /* Quest of Magic */ = {
+		activeExec = 0;
+		executables = (
+			34D512841359104A00FC1443 /* Quest of Magic */,
+		);
+	};
+	34D512841359104A00FC1443 /* Quest of Magic */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Quest of Magic";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	34D512971359104D00FC1443 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	34D512981359104D00FC1443 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
