@@ -97,6 +97,7 @@ Quest_of_MagicAppDelegate *loadGameScreenDelegate;
         //Switch to GameScreen
         GameScreen *controller = [[GameScreen alloc] initWithNibName:@"GameScreen" bundle:nil];
         [[self navigationController] pushViewController:controller animated:YES];
+        [controller view];
         [controller goToCard:loadGameScreenDelegate.gameData.card];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please Select a Saved Game" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
