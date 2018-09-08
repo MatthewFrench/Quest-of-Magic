@@ -8,7 +8,7 @@
 
 #import "TitleScreen.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *titleScreenDelegate;
 @implementation TitleScreen
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -35,7 +35,7 @@ Quest_of_MagicAppDelegate *delegate;
     [[self navigationController] pushViewController:controller animated:YES];
 }
 - (IBAction)playBtn:(id)sender {
-    delegate.savedFile = -1;
+    titleScreenDelegate.savedFile = -1;
     [animationTimer invalidate];
     [animationTimer release];
     animationTimer = NULL;
@@ -68,7 +68,7 @@ Quest_of_MagicAppDelegate *delegate;
 #pragma mark - View lifecycle
 
 - (void)awakeFromNib {
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    titleScreenDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
     
     MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Roguesoft Intro Movie" ofType:@"m4v"]]];
     player.view.frame = CGRectMake(0, 0, 480, 320);
@@ -84,6 +84,7 @@ Quest_of_MagicAppDelegate *delegate;
     creditsBtn.alpha = 0.0;
     [player play];
     [super viewDidLoad];
+    [super awakeFromNib];
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {

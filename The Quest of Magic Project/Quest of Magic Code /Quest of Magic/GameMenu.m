@@ -8,7 +8,7 @@
 
 #import "GameMenu.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *gameMenuDelegate;
 
 @implementation GameMenu
 
@@ -40,8 +40,8 @@ Quest_of_MagicAppDelegate *delegate;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    gameData = delegate.gameData;
+    gameMenuDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    gameData = gameMenuDelegate.gameData;
     // Do any additional setup after loading the view from its nib.
     if ([gameData.playerrace isEqualToString: @"Human"]) [backgroundImageView setImage:[UIImage imageNamed:@"Map 202.png"]];
     if ([gameData.playerrace isEqualToString: @"Elf"]) [backgroundImageView setImage:[UIImage imageNamed:@"Map 201.png"]];

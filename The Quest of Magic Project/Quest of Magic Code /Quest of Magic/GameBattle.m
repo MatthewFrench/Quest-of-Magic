@@ -8,7 +8,7 @@
 
 #import "GameBattle.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *gameBattleDelegate;
 
 @implementation GameBattle
 
@@ -70,8 +70,8 @@ Quest_of_MagicAppDelegate *delegate;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    gameData = delegate.gameData;
+    gameBattleDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    gameData = gameBattleDelegate.gameData;
     
     [potionButton setTitle:[NSString stringWithFormat:@"Potion(%d)", gameData.ITEMhealingpotions] forState:UIControlStateNormal];
     

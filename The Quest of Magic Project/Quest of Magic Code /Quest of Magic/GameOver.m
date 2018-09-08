@@ -8,7 +8,7 @@
 
 #import "GameOver.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *gameOverDelegate;
 
 @implementation GameOver
 
@@ -28,7 +28,7 @@ Quest_of_MagicAppDelegate *delegate;
     [gameData.theAudio stop];
     [gameData release];
     gameData = nil;
-    delegate.gameData = nil;
+    gameOverDelegate.gameData = nil;
     
     [titleScreen runTitleAnimation];
 }
@@ -61,8 +61,8 @@ Quest_of_MagicAppDelegate *delegate;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    gameData = delegate.gameData;
+    gameOverDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    gameData = gameOverDelegate.gameData;
 }
 
 - (void)viewDidUnload

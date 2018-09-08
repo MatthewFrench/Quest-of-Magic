@@ -8,7 +8,7 @@
 
 #import "GameScreen.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *gamescreenDelegate;
 
 @implementation GameScreen
 
@@ -9786,15 +9786,15 @@ Quest_of_MagicAppDelegate *delegate;
     NSMutableArray *array = (NSMutableArray*)[self loadObjectFromFile:@"savedGames.sav"];
     
     if(array) {
-        if (delegate.savedFile == -1) {
+        if (gamescreenDelegate.savedFile == -1) {
             [array addObject:gameData];
-            delegate.savedFile = [array count]-1;
+            gamescreenDelegate.savedFile = [array count]-1;
         } else {
-            [array replaceObjectAtIndex:delegate.savedFile withObject:gameData];
+            [array replaceObjectAtIndex:gamescreenDelegate.savedFile withObject:gameData];
         }
     } else {
         array = [NSMutableArray arrayWithObject:gameData];
-        delegate.savedFile = 0;
+        gamescreenDelegate.savedFile = 0;
     }
     
     //Save
@@ -9840,8 +9840,8 @@ Quest_of_MagicAppDelegate *delegate;
         cardCache[i] = nil;
     }
     timer = nil;
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    gameData = delegate.gameData;
+    gamescreenDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    gameData = gamescreenDelegate.gameData;
     cardImage.frame = CGRectMake(cardImage.frame.origin.x, cardImage.frame.origin.y, 307, 315);
     playerImage = [self updateSprite:playerImage x:gameData.playerX y:gameData.playerY image:gameData.playersprite];
     //playerImage.image = [UIImage imageNamed:gameData.playersprite];

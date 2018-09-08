@@ -9,7 +9,7 @@
 #import "LoadGameScreen.h"
 
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *loadGameScreenDelegate;
 @implementation LoadGameScreen
 
 
@@ -83,21 +83,21 @@ Quest_of_MagicAppDelegate *delegate;
             [titleScreen stopTitle];
         }
         
-        delegate.savedFile = [tableView indexPathForSelectedRow].row;
+        loadGameScreenDelegate.savedFile = [tableView indexPathForSelectedRow].row;
         
-        delegate.gameData = [savedGames objectAtIndex:[tableView indexPathForSelectedRow].row];
-        [delegate.gameData retain];
+        loadGameScreenDelegate.gameData = [savedGames objectAtIndex:[tableView indexPathForSelectedRow].row];
+        [loadGameScreenDelegate.gameData retain];
         [savedGames release];
         
-        [delegate.gameData playSoundEffect:@"LVup"];
+        [loadGameScreenDelegate.gameData playSoundEffect:@"LVup"];
         
         //Play surface music
-        [delegate.gameData playAudio:@"Surface Music"];
+        [loadGameScreenDelegate.gameData playAudio:@"Surface Music"];
         
         //Switch to GameScreen
         GameScreen *controller = [[GameScreen alloc] initWithNibName:@"GameScreen" bundle:nil];
         [[self navigationController] pushViewController:controller animated:YES];
-        [controller goToCard:delegate.gameData.card];
+        [controller goToCard:loadGameScreenDelegate.gameData.card];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please Select a Saved Game" message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alert show];
@@ -163,7 +163,7 @@ Quest_of_MagicAppDelegate *delegate;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    loadGameScreenDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
     //Load
     savedGames = (NSMutableArray*)[self loadObjectFromFile:@"savedGames.sav"];
     if(!savedGames) {

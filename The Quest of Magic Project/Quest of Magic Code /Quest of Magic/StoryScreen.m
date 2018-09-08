@@ -8,7 +8,7 @@
 
 #import "StoryScreen.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *storyDelegate;
 
 @implementation StoryScreen
 
@@ -93,9 +93,9 @@ Quest_of_MagicAppDelegate *delegate;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    delegate.gameData = [[GameData alloc] init];
-    gameData = delegate.gameData;
+    storyDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    storyDelegate.gameData = [[GameData alloc] init];
+    gameData = storyDelegate.gameData;
     
     [gameData playAudio:@"Dialogue Music"];
     gameData.theAudio.volume = 0.5;

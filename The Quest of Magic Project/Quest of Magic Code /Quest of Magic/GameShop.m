@@ -8,7 +8,7 @@
 
 #import "GameShop.h"
 #import "Quest_of_MagicAppDelegate.h"
-Quest_of_MagicAppDelegate *delegate;
+Quest_of_MagicAppDelegate *gameShopDelegate;
 
 @implementation GameShop
 
@@ -284,8 +284,8 @@ Quest_of_MagicAppDelegate *delegate;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    delegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    gameData = delegate.gameData;
+    gameShopDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
+    gameData = gameShopDelegate.gameData;
     
     [self updateStats];
     if (type == 1) {

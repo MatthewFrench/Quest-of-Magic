@@ -13,7 +13,6 @@
 
 @interface CharacterScreen : UIViewController<UITextFieldDelegate> {
     GameData* gameData;
-    UIAlertView *myAlertView;
 }
 - (IBAction)backFromCharacterView:(id)sender;
 - (IBAction)humanMale:(id)sender;
