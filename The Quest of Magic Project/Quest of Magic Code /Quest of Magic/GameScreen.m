@@ -9588,7 +9588,12 @@ Quest_of_MagicAppDelegate *gamescreenDelegate;
 }
 
 - (void)setMapImage:(int)card {
-    if (cardCache[card] == nil) {UIImage* img = [UIImage imageNamed:[NSString stringWithFormat:@"Map %d.png",card]];[img retain];cardCache[card] = img;}
+    if (cardCache[card] == nil) {
+        UIImage* img = [UIImage imageNamed:[NSString stringWithFormat:@"Map %d.png",card]];
+        [img retain];
+        cardCache[card] = img;
+        
+    }
     cardImage.image = cardCache[card];
 }
  
@@ -9846,7 +9851,7 @@ Quest_of_MagicAppDelegate *gamescreenDelegate;
     playerImage = [self updateSprite:playerImage x:gameData.playerX y:gameData.playerY image:gameData.playersprite];
     //playerImage.image = [UIImage imageNamed:gameData.playersprite];
     [arrowPad setGameScreen:self];
-     
+    
     [super viewDidLoad];
 }
 

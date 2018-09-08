@@ -193,7 +193,8 @@ Quest_of_MagicAppDelegate *characterDelegate;
     GameScreen *controller = [[GameScreen alloc] initWithNibName:@"GameScreen" bundle:nil];
     
     [[self navigationController] pushViewController:controller animated:YES];
-    
+    //Force the instantiation
+    controller.view;
     [controller goToCard:characterDelegate.gameData.card];
 }
 
