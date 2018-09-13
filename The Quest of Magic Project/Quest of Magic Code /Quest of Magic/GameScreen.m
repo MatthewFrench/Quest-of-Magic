@@ -9589,16 +9589,20 @@ Quest_of_MagicAppDelegate *gamescreenDelegate;
 
 - (void)setMapImage:(int)card {
     if (cardCache[card] == nil) {
-        UIImage* img = [UIImage imageNamed:[NSString stringWithFormat:@"Map %d.png",card]];
+        UIImage* img = [UIImage imageNamed:[NSString stringWithFormat:@"QoM Maps/Map %d.png",card]];
         [img retain];
         cardCache[card] = img;
-        
     }
+    //cardImage.frame = CGRectMake(cardImage.frame.origin.x, cardImage.frame.origin.y, 307, 315);
+    //308 x 308
+    //311 x 315 but 306x304 with padding on left and bottom
+    //if () {
+        
+    //}
     cardImage.image = cardCache[card];
 }
  
 - (void)goToCard:(int)card {
-    
     //Stop timer
     timerPaused = FALSE;
     if (timer) {[timer invalidate];timer = nil;}
@@ -9847,7 +9851,7 @@ Quest_of_MagicAppDelegate *gamescreenDelegate;
     timer = nil;
     gamescreenDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
     gameData = gamescreenDelegate.gameData;
-    cardImage.frame = CGRectMake(cardImage.frame.origin.x, cardImage.frame.origin.y, 307, 315);
+    cardImage.frame = CGRectMake(cardImage.frame.origin.x + 4, cardImage.frame.origin.y, 307, 315);
     playerImage = [self updateSprite:playerImage x:gameData.playerX y:gameData.playerY image:gameData.playersprite];
     //playerImage.image = [UIImage imageNamed:gameData.playersprite];
     [arrowPad setGameScreen:self];
@@ -9856,7 +9860,7 @@ Quest_of_MagicAppDelegate *gamescreenDelegate;
 }
 
 - (void)updateSprite:(UIImageView*)sprite x:(int)x y:(int)y {
-    sprite.frame = CGRectMake(x,y-10,sprite.image.size.width,sprite.image.size.height);
+    sprite.frame = CGRectMake(x - 5,y-8,sprite.image.size.width,sprite.image.size.height);
 }
 - (UIImageView*)updateSprite:(UIImageView*)sprite x:(int)x y:(int)y image:(NSString*)image {
     BOOL remake = false;

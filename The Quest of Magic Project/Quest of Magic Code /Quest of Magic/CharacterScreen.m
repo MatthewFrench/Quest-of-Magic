@@ -194,10 +194,12 @@ Quest_of_MagicAppDelegate *characterDelegate;
     
     [[self navigationController] pushViewController:controller animated:YES];
     //Force the instantiation
-    controller.view;
+    [controller view];
+    //[controller awakeFromNib];
+    [controller loadViewIfNeeded];
+    controller.view.alpha = 1.0;
     [controller goToCard:characterDelegate.gameData.card];
 }
-
 
 - (void)viewDidUnload
 {
