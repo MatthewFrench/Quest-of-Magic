@@ -69,7 +69,16 @@ Quest_of_MagicAppDelegate *titleScreenDelegate;
 
 - (void)awakeFromNib {
     titleScreenDelegate = (Quest_of_MagicAppDelegate*)[[UIApplication sharedApplication] delegate];
-    
+     /*
+      let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+      let player = AVPlayer(url: videoURL!)
+      let playerViewController = AVPlayerViewController()
+      playerViewController.player = player
+      self.present(playerViewController, animated: true) {
+          playerViewController.player!.play()
+      }
+      */
+    /*
     MPMoviePlayerController *player = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Roguesoft Intro Movie" ofType:@"m4v"]]];
     player.view.frame = CGRectMake(0, 0, 480, 320);
     [self.view addSubview:player.view];
@@ -83,14 +92,18 @@ Quest_of_MagicAppDelegate *titleScreenDelegate;
     loadBtn.alpha = 0.0;
     creditsBtn.alpha = 0.0;
     [player play];
+     */
     [super viewDidLoad];
     [super awakeFromNib];
+    [self moviePlayBackDidFinish:NULL];
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification {
+    /*
     MPMoviePlayerController *player = [notification object];
     [player.view removeFromSuperview];
     [player release];
+     */
     
     //Load the title animations.
     titleAppear = [[NSMutableArray alloc] init];

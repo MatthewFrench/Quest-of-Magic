@@ -237,6 +237,7 @@
 		34EFEE221357A1E80045EFA4 /* 39.png in Resources */ = {isa = PBXBuildFile; fileRef = 34EFEDFA1357A1E80045EFA4 /* 39.png */; };
 		34EFEE241357A7530045EFA4 /* Default Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 34EFEE231357A74F0045EFA4 /* Default Title.png */; };
 		34FC29BD1356A5B700E0EE15 /* HumanM1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34FC29BC1356A5B700E0EE15 /* HumanM1.gif */; };
+		FF1A012D23B81C8300F7F809 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF1A012C23B81C8300F7F809 /* AVKit.framework */; };
 		FFE0B659214A12F000133427 /* QoM Maps in Resources */ = {isa = PBXBuildFile; fileRef = FFE0B658214A12F000133427 /* QoM Maps */; };
 /* End PBXBuildFile section */
 
@@ -493,6 +494,7 @@
 		34EFEDFA1357A1E80045EFA4 /* 39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 39.png; sourceTree = "<group>"; };
 		34EFEE231357A74F0045EFA4 /* Default Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default Title.png"; sourceTree = "<group>"; };
 		34FC29BC1356A5B700E0EE15 /* HumanM1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HumanM1.gif; sourceTree = "<group>"; };
+		FF1A012C23B81C8300F7F809 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		FFE0B658214A12F000133427 /* QoM Maps */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "QoM Maps"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -501,6 +503,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1A012D23B81C8300F7F809 /* AVKit.framework in Frameworks */,
 				34E408A8144FB461006055AB /* QuartzCore.framework in Frameworks */,
 				34746C54137732BD00CAB075 /* AudioToolbox.framework in Frameworks */,
 				341586261357F246006EC970 /* AVFoundation.framework in Frameworks */,
@@ -586,6 +589,7 @@
 		344C670113566ED100753EF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF1A012C23B81C8300F7F809 /* AVKit.framework */,
 				344C670213566ED100753EF9 /* UIKit.framework */,
 				344C670413566ED100753EF9 /* Foundation.framework */,
 				344C670613566ED100753EF9 /* CoreGraphics.framework */,
@@ -916,6 +920,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 344C66F313566ED000753EF9;
